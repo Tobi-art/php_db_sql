@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <?php include('header.php') ?>
+        <?php include('_header.php') ?>
     </header>
     <main>
         <form action="newuser_act.php" method="post" id="new_u" class='inputForm'>
