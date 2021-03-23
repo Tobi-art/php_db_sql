@@ -1,13 +1,8 @@
 <?php
-session_start();
+include('_func.php');
+
 $user = $_POST['user'];
 $pwd = $_POST['pwd'];
-
-try {
-    $pdo = new PDO('mysql:dbname=storage_db;charset=utf8;host=localhost', 'root', '');
-} catch (PDOException $e) {
-    exit('DbConnectError:' . $e->getMessage());
-}
 
 $sql = 'SELECT * FROM user_id WHERE user_nm=:user AND user_pw=:pwd';
 $stmt = $pdo->prepare($sql);
@@ -27,7 +22,7 @@ if ($val != '') {
     // $_SESSION['life_flag'] = $val['life_flag'];
     $_SESSION['user_nm'] = $val['user_nm'];
 
-    header('Location: ztest.php');
+    header('Location: home.php');
 } else {
     header('Location: login.php');
 }

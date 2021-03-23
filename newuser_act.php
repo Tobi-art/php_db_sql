@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('_func.php');
 
 $user = $_POST['user'];
 $pass1 = $_POST['pass1'];
@@ -10,12 +10,6 @@ if ($pass1 != $pass2) {
 } elseif ($user == "") {
     exit('ユーザー名を入力して下さい。<a href="newuser.php"><button>戻る</button><a>');
 };
-
-try {
-    $pdo = new PDO('mysql:dbname=storage_db;charset=utf8;host=localhost', 'root', '');
-} catch (PDOException $e) {
-    exit('DbConnectError:' . $e->getMessage());
-}
 
 $sql = 'INSERT INTO user_id (id, user_nm, u_id, user_pw, life_flag, indate) VALUES (null, :user, null, :pass, "0", sysdate())';
 $stmt = $pdo->prepare($sql);
