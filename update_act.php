@@ -21,5 +21,11 @@ $status = $update->execute();
 if ($status == false) {
     exit('Error');
 } else {
-    header('Location: viewByDate.php');
+    if ($org == 'exp') {
+        header('Location: home.php');
+    } elseif ($org == 'viewCat') {
+        header('Location: viewByCategory.php');
+    } else {
+        header('Location: viewByDate.php');
+    }
 }

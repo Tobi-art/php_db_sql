@@ -13,17 +13,17 @@ if ($status == false) {
     while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $view .= '<tr>';
         $view .= '<td>';
-        $view .= '<a href="update.php?id=' . $result["id"] . '">';
+        $view .= '<a href="update.php?id=' . $result["id"] . '&org=exp">';
         $view .= $result['expire'];
         $view .= '</a> ';
         $view .= '</td>';
         $view .= '<td>';
-        $view .= '<a href="update.php?id=' . $result["id"] . '">';
+        $view .= '<a href="update.php?id=' . $result["id"] . '&org=exp">';
         $view .= $result['item'];
         $view .= '</a> ';
         $view .= '</td>';
         $view .= '<td>';
-        $view .= '<a href="_delete.php?id=' . $result["id"] . '">';
+        $view .= '<a href="_delete.php?id=' . $result["id"] . '&org=exp">';
         $view .= '<button type="submit" class="dlt">削除</button>';
         $view .= '</a>';
         $view .= '</td>';

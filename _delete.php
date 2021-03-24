@@ -1,5 +1,6 @@
 <?php
 $id = $_GET['id'];
+$org = $_GET['org'];
 
 include('_func.php');
 
@@ -10,6 +11,11 @@ $status = $delete->execute();
 if ($status == false) {
     exit('Error');
 } else {
-    // 削除した場所に戻りたいので、deleteページ三つもあります。Location以外は全く同じです。
-    header('Location: viewByDate.php');
+    if ($org == 'exp') {
+        header('Location: home.php');
+    } elseif ($org == 'viewCat') {
+        header('Location: viewByCategory.php');
+    } else {
+        header('Location: viewByDate.php');
+    }
 }
