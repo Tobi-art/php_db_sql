@@ -12,8 +12,6 @@ function ident()
 }
 ident();
 
-$dbnm = $_SESSION['user_nm'];
-
 function conx_db()
 {
     try {
@@ -24,3 +22,5 @@ function conx_db()
     return $pdo;
 }
 $pdo = conx_db();
+
+$dbnm = $_SESSION['user_nm'];

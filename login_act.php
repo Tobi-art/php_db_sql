@@ -19,7 +19,6 @@ $val = $stmt->fetch();
 
 if ($val != '') {
     $_SESSION['chk_ssid'] = session_id();
-    // $_SESSION['life_flag'] = $val['life_flag'];
     $_SESSION['user_nm'] = $val['user_nm'];
 
     header('Location: home.php');

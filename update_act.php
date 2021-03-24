@@ -8,7 +8,6 @@ $item = $_POST['item'];
 $location = $_POST['location'];
 $expire = $_POST['expire'];
 
-// idを取得し、その部分のみ上書きします。
 $update = $pdo->prepare('UPDATE ' . $dbnm . ' SET category=:category, item=:item, location=:location, expire=:expire WHERE id=:id');
 
 $update->bindValue(':category', $category, PDO::PARAM_STR);
