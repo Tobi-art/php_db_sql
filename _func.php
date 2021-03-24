@@ -15,7 +15,7 @@ ident();
 function conx_db()
 {
     try {
-        $pdo = new PDO('mysql:dbname=storage_db;charset=utf8;host=localhost', 'root', '');
+        $pdo = new PDO('mysql:dbname=zairyou_kanri;charset=utf8;host=localhost', 'root', '');
     } catch (PDOException $e) {
         exit('DbConnectError:' . $e->getMessage());
     }
