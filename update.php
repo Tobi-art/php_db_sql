@@ -1,6 +1,8 @@
 <?php
 include('_func.php');
 $id = $_GET['id'];
+$org = $_GET['org'];
+
 
 $sql = 'SELECT * FROM ' . $dbnm . ' WHERE id=:id';
 $stmt = $pdo->prepare($sql);
@@ -39,10 +41,11 @@ if ($status == false) {
             <label for="location">保存場所</label><input type="text" name="location" value='<?= $row['location'] ?>'><br>
             <label for="expire">賞味期限</label><input type="date" name="expire" value='<?= $row['expire'] ?>'><br>
             <input type="hidden" name="id" value='<?= $row['id'] ?>'>
+            <input type="hidden" name="org" value='<?= $org ?>'>
         </form>
         <div class="updBtn">
             <button type="submit" form="upd">更新</button>
-            <a href="_delete.php?id=<?= $row['id'] ?>"><button type="" class="dlt">削除</button></a>
+            <a href="_delete.php?id=<?= $row['id'] ?>&org=<?= $org ?>"><button type="" class="dlt">削除</button></a>
         </div>
     </div>
     <footer></footer>

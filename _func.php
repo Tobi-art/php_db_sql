@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-$dbnm = $_SESSION['user_nm'];
-
 function ident()
 {
     if (!isset($_SESSION['chk_ssid']) || $_SESSION['chk_ssid'] != session_id()) {
@@ -12,6 +10,9 @@ function ident()
         $_SESSION['chk_ssid'] = session_id();
     }
 }
+ident();
+
+$dbnm = $_SESSION['user_nm'];
 
 function conx_db()
 {

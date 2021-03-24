@@ -2,6 +2,7 @@
 include('_func.php');
 
 $id = $_POST['id'];
+$org = $_POST['org'];
 $category = $_POST['category'];
 $item = $_POST['item'];
 $location = $_POST['location'];
