@@ -28,5 +28,5 @@ $create = $stmt->execute();
 if ($create != true) {
     header('Location: newuser.php');
 } else {
-    header('Location: login.php');
+    header('Location: account.php');
 }

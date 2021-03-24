@@ -20,7 +20,7 @@
             <button type="submit">Login</button>
         </form>
     </main>
-    <a href="newuser.php"><button>新規ユーザー登録</button></a>
+    <a href="account.php"><button>アカウント管理</button></a>
     <footer></footer>
 </body>
 
