@@ -1,6 +1,6 @@
 <!-- データ入力。 -->
 <?php
-include('_func.php');
+include('_ident.php');
 include('_conx.php');
 
 if (

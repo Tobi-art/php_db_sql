@@ -1,6 +1,6 @@
 <!-- テーブルからデータを削除します。 -->
 <?php
-include('_func.php');
+include('_ident.php');
 include('_conx.php');
 
 $id = $_GET['id'];

@@ -13,7 +13,7 @@
 <body>
     <header>
         <?PHP
-        include('_func.php');
+        include('_ident.php');
         include('_header.php')
         ?>
     </header>

@@ -1,6 +1,6 @@
 <!-- アカウント削除 -->
 <?php
-include('_func.php');
+include('_ident.php');
 include('_conx.php');
 
 $user = $_POST['user'];

@@ -20,7 +20,7 @@
         </div>
 
         <?php
-        include('_func.php');
+        include('_ident.php');
         include('_conx.php');
 
         $stmt = $pdo->prepare('SELECT * FROM ' . $dbnm . ' ORDER BY expire asc');

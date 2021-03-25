@@ -1,7 +1,7 @@
 <!-- パスワードを変更する機能です。 -->
 <?php
 include('_conx.php');
-include('_func.php');
+include('_ident.php');
 
 $usrname = $_POST['usrname'];
 $pwold = $_POST['pwold'];

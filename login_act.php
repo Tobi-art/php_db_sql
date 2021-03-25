@@ -1,6 +1,6 @@
 <!-- ログインの時パスワードとユーザーネームを確認し、承認に必要な関数をセットします。 -->
 <?php
-include('_func.php');
+include('_ident.php');
 include('_conx.php');
 
 $user = $_POST['user'];
