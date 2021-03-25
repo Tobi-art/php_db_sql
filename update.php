@@ -1,6 +1,7 @@
 <!-- データ更新機能。クリックしたアイテムのデータを取得し、フォームに出力します。 -->
 <?php
-include('_func.php');
+include('_ident.php');
+include('_conx.php');
 $id = $_GET['id'];
 $org = $_GET['org'];
 
