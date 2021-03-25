@@ -1,15 +1,16 @@
+<!-- 賞味期限が最も短い食品五つを表示します。 -->
 <?php
 include('_func.php');
+include('_conx.php');
 
-// 一番賞味期限が短い品物五つ表示します。
 $stmt = $pdo->prepare('SELECT * FROM ' . $dbnm . ' ORDER BY expire asc LIMIT 5');
 $status = $stmt->execute();
 
-// テーブルの方が見やすいので、全てテーブルに入れておきます。
 $view = '<tr><th>賞味期限</th><th>品名</th></tr>';
 if ($status == false) {
     exit('Error!');
 } else {
+    //テーブルレイアウトの方が見やすいので、テーブルに入れておきます。
     while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $view .= '<tr>';
         $view .= '<td>';

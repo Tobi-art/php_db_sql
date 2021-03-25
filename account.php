@@ -1,3 +1,4 @@
+<!-- アカウント管理画面です。こちらからパスワード変更、新規登録、アカウント削除機能にアクセスできます。 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +21,6 @@
             <a href="account_new.php"><button>アカウント新規作成</button></a>
             <a href="account_drop.php"><button>アカウント削除</button></a>
         </div>
-
     </main>
     <footer>
     </footer>

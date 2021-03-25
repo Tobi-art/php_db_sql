@@ -1,3 +1,4 @@
+<!-- 全ページ共通のヘッダーです。ナビゲーション機能もヘッダーに付いています。 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,11 +12,8 @@
 
 <body>
     <header>
-        <!-- navigationボタンが付いているのでheaderは全てのページに必要です。includeで簡単に表示できるので、専用ページを作成しています。 -->
         <h1>在庫管理表</h1>
-        <!-- <div id="logout"> -->
         <a href="account.php" style="position: absolute; top: 20px; right: 20px"><button>アカウント管理</button></a>
-        <!-- </div> -->
         <div id="navbar">
             <a href="home.php">
                 <h4 id="home">ホーム画面</h4>

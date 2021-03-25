@@ -1,3 +1,4 @@
+<!-- ログイン画面 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +18,7 @@
         <form action="login_act.php" method="post">
             <label for="user">User:</label><input type="text" name="user"><br>
             <label for="pwd">Password:</label><input type="password" name="pwd"><br>
-            <button type="submit">Login</button>
+            <button type="submit">ログイン</button>
         </form>
     </main>
     <footer></footer>

@@ -1,11 +1,13 @@
+<!-- パスワードを変更する機能です。 -->
 <?php
-
+include('_conx.php');
 include('_func.php');
 
 $usrname = $_POST['usrname'];
 $pwold = $_POST['pwold'];
 $pwnew = $_POST['pwnew'];
 
+//誰でも変更できれば困るので、先ずは現在のパスワードを確認してから変更処理に入ります。
 $sql = 'SELECT * FROM user_id WHERE user_nm=:usrname AND user_pw=:pwold';
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':usrname', $usrname);
@@ -26,7 +28,7 @@ if ($val != '') {
     $stmt->bindValue(':pwold', $pwold);
     $stmt->bindValue(':pwnew', $pwnew);
     $res = $stmt->execute();
-
+    //反応がないと、実行されたかよく分からないですが、phpページをそれ以上増やしたくなかったのでJSで対応しています。
     echo ('<script>
             if(confirm("パスワーを変更しました。")){
                 window.location.href = "login.php";

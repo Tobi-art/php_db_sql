@@ -1,3 +1,4 @@
+<!-- ログインが必要なページの認証機能。 -->
 <?php
 session_start();
 
@@ -11,16 +12,3 @@ function ident()
     }
 }
 ident();
-
-function conx_db()
-{
-    try {
-        $pdo = new PDO('mysql:dbname=zairyou_kanri;charset=utf8;host=localhost', 'root', '');
-    } catch (PDOException $e) {
-        exit('DbConnectError:' . $e->getMessage());
-    }
-    return $pdo;
-}
-$pdo = conx_db();
-
-$dbnm = $_SESSION['user_nm'];

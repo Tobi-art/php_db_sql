@@ -1,5 +1,7 @@
+<!-- データ変更機能。 -->
 <?php
 include('_func.php');
+include('_conx.php');
 
 $id = $_POST['id'];
 $org = $_POST['org'];
@@ -21,6 +23,7 @@ $status = $update->execute();
 if ($status == false) {
     exit('Error');
 } else {
+    // 成功すれば、ボタンを押す前見たページに戻ります。
     if ($org == 'exp') {
         header('Location: home.php');
     } elseif ($org == 'viewCat') {

@@ -1,3 +1,4 @@
+<!-- 新規アカウント登録フォーム -->
 <!DOCTYPE html>
 <html lang="en">
 

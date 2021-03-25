@@ -1,9 +1,9 @@
+<!-- 各カテゴリーに該当するエントリーを数え、その数字を表示します。 -->
 <?php
-// 一つのカテゴリーに何個が入っているか数えます。
 $stmt = $pdo->prepare('SELECT category, count(category) AS CountOf FROM ' . $dbnm . ' GROUP BY category');
 $status = $stmt->execute();
 
-// テーブルの方が見やすいので、全てテーブルに入れておきます。
+//テーブルレイアウトの方が見やすいので、テーブルに入れておきます。
 $count = '<tr><th colspan="2">残存</th></tr>';
 if ($status == false) {
     exit('Error!');
@@ -22,6 +22,5 @@ if ($status == false) {
     }
     $count .= '<tr><td><br></td><td></td></tr>';
 }
-
 ?>
 <div class="counts"><?= $count ?></div>

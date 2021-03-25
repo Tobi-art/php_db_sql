@@ -1,3 +1,4 @@
+<!-- データ入力フォーム -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +14,10 @@
     <header>
         <?PHP
         include('_func.php');
-        ident();
         include('_header.php')
         ?>
     </header>
     <main>
-        <!-- とてもシンプルなHTMLフォームです。 -->
         <form action="input_act.php" method="post" id="registerNew" class='inputForm'>
             <label for="category">種類</label><input type="text" name="category"><br>
             <label for="item">品名</label><input type="text" name="item"><br>
@@ -30,8 +29,6 @@
                 <button type="submit" form="registerNew">登録する</button>
             </div>
     </main>
-    <!-- footerはページの区切りとして作っておきましたが、結局使わなかったです。 -->
-    <!-- これから追加で機能を開発することがあるかもしれないので、残しておきました。 -->
     <footer></footer>
     </form>
 </body>

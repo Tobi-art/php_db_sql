@@ -1,3 +1,4 @@
+<!-- ホーム画面。便利な機能いくつかまとめたサイトです。賞味期限の最も短い商品と各カテゴリーの残存並びに、検索機能を用意しています。 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,19 +13,16 @@
 
 <body>
     <header>
-        <!-- headerを読み込みます。 -->
         <?PHP
         include('_header.php') ?>
     </header>
     <main>
-        <!-- 一番賞味期限の短い品物五つを表示します。 -->
         <div id='display'>
             <h5 class='view'>賞味期限が迫っている!</h5>
             <table>
                 <?PHP include('_exp_soon.php') ?>
             </table>
         </div>
-        <!-- 検索機能はどうしても作ってみたかったです。もう少し時間がありましたら、LIKEと％を用いて、商品名の一部を入力しても表示される様にしたいと思います。 -->
         <div id="searchbar">
             <form action="search.php" method="post" class='inputForm'>
                 <label for="search">何か探していますか？</label>
@@ -32,7 +30,6 @@
                 <button type="submit">検索</button>
             </form>
             <br>
-            <!-- カテゴリー別の残存を表示します。 -->
             <div id="byCategory">
                 <table id='rest'>
                     <?php include('_counts.php') ?>
