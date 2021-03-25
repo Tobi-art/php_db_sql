@@ -14,7 +14,7 @@
         <!-- navigationボタンが付いているのでheaderは全てのページに必要です。includeで簡単に表示できるので、専用ページを作成しています。 -->
         <h1>在庫管理表</h1>
         <!-- <div id="logout"> -->
-        <a href="_logout.php" style="position: absolute; top: 20px; right: 20px"><button>ログアウト</button></a>
+        <a href="account.php" style="position: absolute; top: 20px; right: 20px"><button>アカウント管理</button></a>
         <!-- </div> -->
         <div id="navbar">
             <a href="home.php">

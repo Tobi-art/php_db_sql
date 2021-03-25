@@ -14,30 +14,15 @@
         <?php include('_header.php') ?>
     </header>
     <main>
-        <!-- <div id="halfleft"> -->
-        <form action="_chgpw.php" method="post">
-            <h2>パスワード変更</h2>
-            <label for="username">ユーザー名</label><input type="text" 　name='username'>
-            <label for="pwold">パスワード</label><input type="text" name='pwold'>
-            <label for="pwnew">新しいパスワード</label><input type="text" name='pwnew'><br>
-            <button type="submit">変更する</button>
-        </form>
+        <div id='accounts' style='display: flex; flex-direction: column; padding-top: 5vw'>
+            <a href="_logout.php"><button>ログアウト</button></a>
+            <a href="account_chgpw.php"><button>パスワード変更</button></a>
+            <a href="account_new.php"><button>アカウント新規作成</button></a>
+            <a href="account_drop.php"><button>アカウント削除</button></a>
+        </div>
 
-
-        <!-- </div> -->
-        <!-- <div id="halfright"> -->
-        <form action="newuser_act.php" method="post" id="new_u">
-            <h2>新規登録</h2>
-            <label for="user">ユーザー名</label><input type="text" name="user"><br>
-            <label for="pass1">パスワード</label><input type="password" name="pass1"><br>
-            <label for="pass2">パスワード再確認</label><input type="password" name="pass2"><br>
-            <div class="buttons">
-                <button type="submit" form="new_u">登録する</button>
-            </div>
-            <!-- </div> -->
     </main>
     <footer>
-        <a href="account_delete.php"><button>アカウント削除</button></a>
     </footer>
 </body>
 
